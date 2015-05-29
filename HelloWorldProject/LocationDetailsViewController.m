@@ -110,7 +110,9 @@
 
 -(IBAction)callButtonPressed:(id)sender
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", self.phoneNumber]]];
+    NSString *newString = [[self.phoneNumber componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
+                           componentsJoinedByString:@""];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",newString]]];
 }
 
 

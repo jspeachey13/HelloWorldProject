@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HelloWorldProject/TableViewController.m"
-            timestampString = "454562894.424096"
+            filePath = "HelloWorldProject/LocationDetailsViewController.m"
+            timestampString = "454566959.556733"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-callButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
