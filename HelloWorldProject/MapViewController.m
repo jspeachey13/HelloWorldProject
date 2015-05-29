@@ -152,10 +152,10 @@
     else {
         MKAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
         
-        annotationView.image = [UIImage imageNamed:@"logo-nav.png"];
+        annotationView.image = [UIImage imageNamed:@"helloWorldMarker.png"];
         annotationView.canShowCallout = YES;
         annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        annotationView.frame = CGRectMake(0, 0, 60, 60);
+        annotationView.frame = CGRectMake(0, 0, 50, 50);
         
         return annotationView;
     }
@@ -180,6 +180,12 @@
         //Array to pass on to LocationDetailsViewController
         detailViewController.locationDetails = [[NSArray alloc] initWithObjects:currentLocation.name, currentLocation.address, currentLocation.address2, currentLocation.city, currentLocation.state, currentLocation.zip,currentLocation.officeImage, currentLocation.latitude, currentLocation.longitude, currentLocation.phone, currentLocation.distance, nil];
     }
+}
+
+
+-(IBAction)locateUserButtonPressed:(id)sender {
+    
+    [self.mapView showAnnotations:self.mapView.annotations animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

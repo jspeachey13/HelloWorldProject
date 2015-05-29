@@ -7,6 +7,11 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FontAwesome.ttf">
+            <string>FontAwesome</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Location Details View Controller-->
         <scene sceneID="LPt-Hy-LEJ">
@@ -15,9 +20,10 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="3" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OC4-WT-VZ7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.53333333329999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="1" green="0.31372549020000001" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="PxU-PX-WZm">
                                 <cells>
@@ -228,19 +234,23 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="itx-XZ-6up" firstAttribute="bottom" secondItem="9P7-hG-51G" secondAttribute="bottom" constant="-5" id="Ees-Yg-fvG">
                                                     <variation key="heightClass=regular-widthClass=compact" constant="-5"/>
                                                 </constraint>
-                                                <constraint firstItem="tOK-Ib-eJj" firstAttribute="top" secondItem="9NU-LX-KVQ" secondAttribute="bottom" constant="3" id="OOF-6u-IXJ"/>
+                                                <constraint firstItem="tOK-Ib-eJj" firstAttribute="top" secondItem="9NU-LX-KVQ" secondAttribute="bottom" constant="3" id="OOF-6u-IXJ">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                                </constraint>
                                                 <constraint firstAttribute="trailingMargin" secondItem="itx-XZ-6up" secondAttribute="trailing" constant="24" id="W2q-lE-Zev"/>
                                                 <constraint firstItem="9P7-hG-51G" firstAttribute="top" secondItem="387-M8-8J3" secondAttribute="topMargin" constant="5" id="bmd-Bp-ONS"/>
                                                 <constraint firstItem="T9F-KG-716" firstAttribute="leading" secondItem="9P7-hG-51G" secondAttribute="leading" id="j0Z-Ey-B0L"/>
                                                 <constraint firstItem="9P7-hG-51G" firstAttribute="leading" secondItem="387-M8-8J3" secondAttribute="leadingMargin" constant="16" id="jqA-EQ-Ldx"/>
                                                 <constraint firstItem="T9F-KG-716" firstAttribute="top" secondItem="9P7-hG-51G" secondAttribute="bottom" constant="8" id="naQ-3D-AeM"/>
                                                 <constraint firstItem="T9F-KG-716" firstAttribute="leading" secondItem="9NU-LX-KVQ" secondAttribute="leading" id="naR-Cn-bR7"/>
-                                                <constraint firstItem="9NU-LX-KVQ" firstAttribute="top" secondItem="T9F-KG-716" secondAttribute="bottom" constant="3" id="nch-1O-7IG"/>
+                                                <constraint firstItem="9NU-LX-KVQ" firstAttribute="top" secondItem="T9F-KG-716" secondAttribute="bottom" constant="3" id="nch-1O-7IG">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                                </constraint>
                                                 <constraint firstItem="9NU-LX-KVQ" firstAttribute="leading" secondItem="tOK-Ib-eJj" secondAttribute="leading" id="okO-Rh-POC"/>
                                             </constraints>
                                             <variation key="default">
@@ -451,7 +461,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="pZ7-Zi-cPj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="1" green="0.31372549020000001" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -656,12 +666,62 @@
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                 <color key="color" red="1" green="0.31372549020000001" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPZ-na-Tuw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar8-k2-hBq">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="20"/>
+                                        <state key="normal" title="">
+                                            <color key="titleColor" red="0.0" green="0.53333333329999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="locateUserButtonPressed:" destination="aE0-bf-C1e" eventType="touchUpInside" id="geT-YM-Nqt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ar8-k2-hBq" firstAttribute="top" secondItem="KPZ-na-Tuw" secondAttribute="top" id="C2d-fB-EHa"/>
+                                    <constraint firstAttribute="centerY" secondItem="Ar8-k2-hBq" secondAttribute="centerY" id="Izz-jn-pjH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ar8-k2-hBq" secondAttribute="trailing" constant="8" id="MFQ-dr-pw3"/>
+                                    <constraint firstAttribute="height" constant="30" id="hgc-bP-vcg"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Ar8-k2-hBq"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="hgc-bP-vcg"/>
+                                        <exclude reference="C2d-fB-EHa"/>
+                                        <exclude reference="Izz-jn-pjH"/>
+                                        <exclude reference="MFQ-dr-pw3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="Ar8-k2-hBq"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="hgc-bP-vcg"/>
+                                        <include reference="C2d-fB-EHa"/>
+                                        <include reference="Izz-jn-pjH"/>
+                                        <include reference="MFQ-dr-pw3"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0" green="0.53333333329999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="KPZ-na-Tuw" firstAttribute="top" secondItem="HEd-rZ-EVK" secondAttribute="top" constant="770" id="1kE-y0-Z6k"/>
+                            <constraint firstItem="KPZ-na-Tuw" firstAttribute="bottom" secondItem="P2S-hR-l1O" secondAttribute="top" id="Aca-4C-dDx"/>
+                            <constraint firstItem="KPZ-na-Tuw" firstAttribute="trailing" secondItem="OL9-Ol-3Mg" secondAttribute="trailing" id="Ccf-aO-28h"/>
+                            <constraint firstItem="KPZ-na-Tuw" firstAttribute="leading" secondItem="OL9-Ol-3Mg" secondAttribute="leading" id="Iym-QJ-3OE"/>
                             <constraint firstItem="OL9-Ol-3Mg" firstAttribute="leading" secondItem="HEd-rZ-EVK" secondAttribute="leading" id="Mhx-5R-BTn"/>
                             <constraint firstItem="akM-VP-VuR" firstAttribute="top" secondItem="OFS-Te-t06" secondAttribute="bottom" constant="317" id="P5H-mo-bka"/>
+                            <constraint firstItem="KPZ-na-Tuw" firstAttribute="bottom" secondItem="OL9-Ol-3Mg" secondAttribute="bottom" id="P8l-Sd-rrK"/>
                             <constraint firstItem="OL9-Ol-3Mg" firstAttribute="bottom" secondItem="P2S-hR-l1O" secondAttribute="top" id="Ptf-zr-6ea"/>
                             <constraint firstAttribute="centerY" secondItem="OL9-Ol-3Mg" secondAttribute="centerY" id="dj3-w9-yGt"/>
                             <constraint firstItem="OL9-Ol-3Mg" firstAttribute="centerX" secondItem="akM-VP-VuR" secondAttribute="centerX" id="iKl-bD-Bfa"/>
@@ -674,6 +734,7 @@
                             <mask key="subviews">
                                 <exclude reference="OL9-Ol-3Mg"/>
                                 <exclude reference="akM-VP-VuR"/>
+                                <exclude reference="KPZ-na-Tuw"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Mhx-5R-BTn"/>
@@ -685,12 +746,18 @@
                                 <exclude reference="P5H-mo-bka"/>
                                 <exclude reference="oZe-ce-U07"/>
                                 <exclude reference="puX-3f-uPP"/>
+                                <exclude reference="1kE-y0-Z6k"/>
+                                <exclude reference="Aca-4C-dDx"/>
+                                <exclude reference="Ccf-aO-28h"/>
+                                <exclude reference="Iym-QJ-3OE"/>
+                                <exclude reference="P8l-Sd-rrK"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="OL9-Ol-3Mg"/>
                                 <include reference="akM-VP-VuR"/>
+                                <include reference="KPZ-na-Tuw"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Mhx-5R-BTn"/>
@@ -702,6 +769,11 @@
                                 <exclude reference="P5H-mo-bka"/>
                                 <include reference="oZe-ce-U07"/>
                                 <include reference="puX-3f-uPP"/>
+                                <exclude reference="1kE-y0-Z6k"/>
+                                <exclude reference="Aca-4C-dDx"/>
+                                <include reference="Ccf-aO-28h"/>
+                                <include reference="Iym-QJ-3OE"/>
+                                <include reference="P8l-Sd-rrK"/>
                             </mask>
                         </variation>
                     </view>
@@ -716,6 +788,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="akM-VP-VuR" id="UZ3-mu-zKI"/>
                         <outlet property="flipMap" destination="LpD-MW-HUq" id="wcZ-9y-byG"/>
+                        <outlet property="locateUserButton" destination="Ar8-k2-hBq" id="oaR-Zw-D7M"/>
                         <outlet property="mapView" destination="OL9-Ol-3Mg" id="WGd-tW-QWJ"/>
                         <segue destination="vsU-Ya-LUN" kind="show" identifier="mapDetails" id="TTR-Bi-maP"/>
                     </connections>
@@ -735,7 +808,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.0" green="0.53333333329999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
@@ -751,6 +824,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SXc-Jq-Jwu"/>
+        <segue reference="TTR-Bi-maP"/>
     </inferredMetricsTieBreakers>
 </document>

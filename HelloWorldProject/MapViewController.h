@@ -20,6 +20,9 @@
 @property(nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *flipMap;
 
+@property (nonatomic, strong) IBOutlet UIButton *locateUserButton;
+
+-(IBAction)locateUserButtonPressed:(id)sender;
 
 @end
 

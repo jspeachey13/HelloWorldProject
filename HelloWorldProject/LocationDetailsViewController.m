@@ -100,8 +100,8 @@
     else {
         MKAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
         
-        annotationView.image = [UIImage imageNamed:@"logo-nav.png"];
-        annotationView.frame = CGRectMake(0, 0, 75, 75);
+        annotationView.image = [UIImage imageNamed:@"helloWorldMarker.png"];
+        annotationView.frame = CGRectMake(0, 0, 55, 55);
         
         return annotationView;
     }
@@ -156,10 +156,10 @@
     [tintColor setFill];
     CGRect bounds = CGRectMake(0, 0, officeImage.size.width, officeImage.size.height);
     UIRectFill(bounds);
-    [officeImage drawInRect:bounds blendMode:blendMode alpha:.75];
+    [officeImage drawInRect:bounds blendMode:blendMode alpha:.55];
     
     if (blendMode != kCGBlendModeDestinationIn)
-        [officeImage drawInRect:bounds blendMode:kCGBlendModeDestinationIn alpha:.75];
+        [officeImage drawInRect:bounds blendMode:kCGBlendModeDestinationIn alpha:.55];
     
     UIImage *tintedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
