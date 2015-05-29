@@ -80,6 +80,7 @@
     NSDictionary *attributes = @{NSFontAttributeName: font};
     [self.flipMap setTitleTextAttributes:attributes forState:UIControlStateNormal];
     
+    [self.navigationItem setHidesBackButton:YES animated:NO];
 }
 
 -(void)loadJsonData:(NSData *)jsonData {

@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 That Peachey Thing, LLC. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *officeMap;
 
 @property (strong, nonatomic) IBOutlet UIImageView *officeImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *overlayImageView;
 
 @property (strong, nonatomic) IBOutlet UIButton *callButton;
 @property (strong, nonatomic) IBOutlet UIButton *directionButton;

@@ -75,20 +75,10 @@
     NSDictionary *attributes = @{NSFontAttributeName: font};
     [self.flipToMap setTitleTextAttributes:attributes forState:UIControlStateNormal];
     
-    // Create gradient  background for TableView
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.tableView.frame.size.height)];
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = view.bounds;
-    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1] CGColor],(id)[[UIColor colorWithRed:167/255.0f green:167/255.0f blue:167/255.0f alpha:1] CGColor], nil];
-    [view.layer insertSublayer:gradient atIndex:0];
-    
-    [self.view addSubview:view];
-    [self.view sendSubviewToBack:view];
-    
-    
-    self.view.backgroundColor = [UIColor colorWithRed:167/255.0f green:167/255.0f blue:167/255.0f alpha:1];
+    [self.navigationItem setHidesBackButton:YES animated:NO];
     
 }
+
 
 -(NSMutableArray *)locationArray{
     if(!_locationArray) _locationArray = [[NSMutableArray alloc]init];
@@ -186,7 +176,13 @@
     cell.locationAddressTwo.text = currentContact.address2;
     cell.locationCityStateZip.text = [NSString stringWithFormat:@"%@, %@ %@", currentContact.city, currentContact.state, currentContact.zip];
     cell.locationDistance.text = currentContact.distance;
-    cell.backgroundColor = [UIColor clearColor];
+    
+    if(indexPath.row % 2 == 0){
+        cell.backgroundColor = [UIColor colorWithRed:167/255.0f green:167/255.0f blue:167/255.0f alpha:.30];
+    }
+    else {
+        cell.backgroundColor = [UIColor colorWithRed:167/255.0f green:167/255.0f blue:167/255.0f alpha:.15];
+    }
     
     return cell;
 }

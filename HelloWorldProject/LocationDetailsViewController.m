@@ -57,16 +57,11 @@
     [self.officeImageView sd_setImageWithURL:[NSURL URLWithString:self.imageURLString]
                                 placeholderImage:[UIImage imageNamed:@"placeholder.jpg"]];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = view.bounds;
-    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1] CGColor],(id)[[UIColor colorWithRed:167/255.0f green:167/255.0f blue:167/255.0f alpha:1] CGColor], nil];
-    [view.layer insertSublayer:gradient atIndex:0];
+    // Overlay Office Image
+    UIImage *overlayImage = [self tintedImageWithColor:[UIColor colorWithRed:0/255.0f green:136/255.0f blue:199/255.0f alpha:1] image:self.officeImageView.image];
+    [self.overlayImageView setImage:overlayImage];
     
-    [self.view addSubview:view];
-    [self.view insertSubview:view atIndex:0];
-    
-    self.view.backgroundColor = [UIColor colorWithRed:167/255.0f green:167/255.0f blue:167/255.0f alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0/255.0f green:136/255.0f blue:199/255.0f alpha:1];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -147,5 +142,27 @@
     [mapItem openInMapsWithLaunchOptions:options];
 }
 
+// Create overlay image
+- (UIImage *)tintedImageWithColor:(UIColor *)tintColor image:(UIImage *)officeImage
+{
+    return [self tintedImageWithColor:tintColor blendingMode:kCGBlendModeDestinationIn image:officeImage];
+}
+
+- (UIImage *)tintedImageWithColor:(UIColor *)tintColor blendingMode:(CGBlendMode)blendMode image:(UIImage *)officeImage
+{
+    UIGraphicsBeginImageContextWithOptions(officeImage.size, NO, 0.0f);
+    [tintColor setFill];
+    CGRect bounds = CGRectMake(0, 0, officeImage.size.width, officeImage.size.height);
+    UIRectFill(bounds);
+    [officeImage drawInRect:bounds blendMode:blendMode alpha:.75];
+    
+    if (blendMode != kCGBlendModeDestinationIn)
+        [officeImage drawInRect:bounds blendMode:kCGBlendModeDestinationIn alpha:.75];
+    
+    UIImage *tintedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return tintedImage;
+}
 
 @end
